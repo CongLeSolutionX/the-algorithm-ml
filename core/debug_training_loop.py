@@ -32,7 +32,7 @@ def train(
   logging.warning("Running debug training loop, don't use for model training.")
 
   data_iter = iter(dataset)
-  for step in range(0, train_steps + 1):
+  for step in range(train_steps + 1):
     x = next(data_iter)
     optimizer.zero_grad()
     loss, outputs = model.forward(x)
